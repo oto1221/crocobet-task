@@ -1,0 +1,75 @@
+
+<div class=" bg-light">
+    <div class="container bg-white rounded mt-3" >
+      <button  class="btn bt  mt-2" (click)="back()" ><i class="fa fa-chevron-circle-left"></i>Back</button>
+      <button style="float: right;" class="btn bt  mt-2" [queryParams]="{id: Id }" [routerLink]="['/details/' + Id + '/posts']">Posts</button>
+    <h2 class=" d-flex justify-content-center pt-3" style="letter-spacing: 10px;">Details</h2>
+    <div class=" row d-flex justify-content-center py-2">
+      <!-- loop to reach every element of details -->  
+      <ng-container *ngFor="let d of details">
+           <table class="table table-borderless table-hover" style="width: 50%;">
+            <thead class="table-dark">
+              <tr>
+                <th class="table-dark" scope="col"> </th>
+                <th scope="col">Personal Info</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th  scope="row">Name</th>
+                <td>{{d.name}}</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">Username</th>
+                <td>{{d.username}}</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">Email</th>
+                <td colspan="2">{{d.email}}</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">Phone</th>
+                <td colspan="2">{{d.phone}}</td>
+                
+              </tr> <tr>
+                <th scope="row">Company</th>
+                <td colspan="2">{{d.company.name}}</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">Catchphrase</th>
+                <td colspan="2">{{d.company.catchPhrase}}</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">City</th>
+                <td colspan="2">{{d.address.city}}</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">Street</th>
+                <td colspan="2">{{d.address.street}}</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">Suite</th>
+                <td colspan="2">{{d.address.suite}}</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">Website</th>
+                <td colspan="2">{{d.website}}</td>
+                
+              </tr>
+            </tbody>
+          </table>
+        </ng-container>
+    </div>
+    
+    </div>
+    </div>
+  <!-- test -->

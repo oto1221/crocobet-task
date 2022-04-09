@@ -1,0 +1,16 @@
+<div class=" bg-light">
+<div class="container bg-white rounded mt-3" >
+
+
+<h2 class=" d-flex justify-content-center pt-3" style="letter-spacing: 10px;">Users</h2>
+
+<div class=" row row-cols-md-3 d-flex justify-content-center py-2">
+    <!-- loop to reach every element of users -->
+    <ng-container *ngFor="let user of users">
+        <button class="btn btn-outline-success m-2 border-2" (click)="userDetails(user.id)"  >{{user.name}}</button>
+        
+    </ng-container>
+</div>
+
+</div>
+</div>

@@ -1,0 +1,21 @@
+<div class=" bg-light">
+    <div class="container bg-white rounded my-3" >
+        <button  class="btn  mt-2" (click)="back()" ><i class="fa fa-chevron-circle-left"></i>Back</button>
+    
+    <h2 class=" d-flex justify-content-center pt-3" style="letter-spacing: 10px;">Posts</h2>
+    
+    <div class=" row row-cols-md-1 d-flex justify-content-center py-2">
+        <!-- loop to reach every element of posts -->
+        <ng-container *ngFor="let p of posts">
+            <div class="posts my-1" style="width: 70%;">
+                <span class="d-flex justify-content-center p-2 title">{{p.title}}</span>
+                <span class="d-flex justify-content-start p-2">{{p.body}}</span>
+            </div>
+           
+        </ng-container>
+        
+    </div>
+    
+    </div>
+    </div>
+    
